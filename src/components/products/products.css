@@ -1,0 +1,242 @@
+/* category style */
+.category-section{
+    margin: 20px 0;
+}
+
+
+
+.category-section .container h3{
+    color: #333;
+    margin-bottom:10px;
+    width: 200px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid gainsboro;
+}
+.category-section .container .cat-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+}
+
+@media (max-width:990px) {
+   .category-section .container .cat-list{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 10px;
+    }
+    
+}
+@media (max-width:530px) {
+    .category-section .container .cat-list{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+
+    }
+    
+}
+
+.category-section .container .cat-list a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.category-section .container .cat-list .cat-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(241, 239, 237, 0.664);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.category-section .container .cat-list .cat-img img{
+    width: 80%;
+    object-fit: contain;
+    border-radius: 10%;
+}
+
+
+/* ///////////////////////////////////// */
+/* card product */
+
+.container .cat-title{
+    color: var(--dark);
+}
+.products-container {
+       margin-top: 10px;
+    padding: 10px;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 10px;
+}
+
+.products-container .card{
+    padding: 10px;
+    position: relative;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid gray;
+    transition: 0.3s ease;
+    &:hover{
+        border-color: rgb(0, 183, 255);
+        cursor: pointer;
+        /* transform: scale(1.1); */
+    }
+}
+.products-container .card img{
+    width: 100px;
+    object-fit: contain;
+    text-align: center;
+}
+
+
+.card .add-cart {
+    border: none;
+    margin-top: 10px;
+    font-size: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: rgb(12, 177, 81);
+    cursor: pointer;
+    color: white;
+}
+
+.card .favorit{
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+/* alert add and remove */
+button.view-cart{
+    background-color: rgb(13, 161, 230);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px ;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    margin: 10px;
+    transition: 0.3s;
+    &:hover{
+        background-color:rgba(13, 161, 230, 0.89) ;
+    }
+}
+
+
+/* //////////////////////////////////////////////////////////////// */
+/* cart section */
+/* cart section */
+.cart-section{
+     padding: 10px;
+    width: 50%;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+.cart-section .cart-list{
+    height: 400px;
+    overflow-y: auto;
+}
+
+.cart-section .cart-list li{
+    border-bottom: 1px solid gainsboro;
+    list-style: none;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart-section .cart-list li img{
+    width: 70px;
+
+}
+.cart-section .cart-list li .product-quantity{
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    align-items: center;
+    background-color: aliceblue;
+    width: fit-content;
+    padding: 10px;
+    gap: 10px;
+    
+
+    button{
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        border: none;
+        background-color: burlywood;
+    }
+}
+
+.cart-section .cart-list li .delet{
+    color: rgb(187, 15, 15);
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 4px 10px;
+    border: none;
+    transition: 0.5s ease;
+
+}
+.cart-section .cart-list li .delet:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+
+
+.total{
+    margin-top: 20px;
+    border: 1px solid gray;
+    padding: 20px;
+    border-radius: 10px;
+    color: #444;
+    font-weight: bold;
+}
+#total-price{
+    color: rgb(13, 95, 172);
+}
+
+
+/* //////////////////////////////////////// */
+/* Favorit page */
+.fav-page{
+    padding:0 20px;
+
+}
+.favorit-container{
+      margin-top: 10px;
+    padding: 10px;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 10px;
+}
+.favorit-container .card{
+        padding: 10px;
+    position: relative;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid gray;
+}
+.favorit-container .card img{
+    width: 100px;
+}

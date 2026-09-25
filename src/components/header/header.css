@@ -1,0 +1,239 @@
+
+header{
+    background-color: var(--dark);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+li{
+    list-style: none;
+}
+
+/* top nav bar  */
+header .top-nav .container{
+    padding: 20px;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+/* main logo */
+header .top-nav .container .logo{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    svg{
+        color: var(--primary-green);
+        font-size: 50px;
+    }
+    color: var(--main-bg);
+}
+
+
+/* search bar */
+header .top-nav .container .search-bar{
+    width: 400px;
+     /* padding: 10px; */
+     overflow: hidden;
+    font-size: 1 rem;
+    border: 1px solid var(--second-bg);
+    display: flex;
+    border-radius: 15px;
+    background-color: var(--main-bg);
+    align-items: center;
+}
+
+header .top-nav .container .search-bar .search-icon {
+    padding: 5px 10px;
+    background-color: #106881;
+    cursor: pointer;
+}
+
+
+header .top-nav .container .search-bar .search-icon svg{
+    color: aqua;
+    font-size: 20px;
+}
+
+.search-bar .search {
+    /* width: 100%; */
+    flex: 1;
+    outline: none;
+    font-size: 1 rem;
+    
+    border: none;
+    padding-left: 20px;
+}
+
+/* cart and fav icons div */
+header .top-nav .container .icons{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+header .top-nav .icons li{
+    position: relative;
+}
+/* counter of cart and fav */
+header .top-nav .icons li span.count{
+
+    position: absolute;
+    top: -12px;
+    right:-12px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-size: 12px;
+    background-color: red;
+    color: var(--main-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .top-nav .icons li svg{
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--main-bg);
+}
+header .top-nav .icons li a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--main-bg);
+    text-decoration: none;
+}
+
+
+
+/* top header responsive */
+@media (max-width:768px){
+header .top-nav .container{
+    width: 100%;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:"logo icons"
+    "search search" ;
+    gap: 10px;
+
+}
+header .top-nav .container .logo {
+    justify-self: start;
+    grid-area: logo;
+}
+
+header .top-nav .container .icons {
+    grid-area: icons;
+    svg{
+        font-size: 20px;
+    }
+    justify-self: end;
+}
+
+header .top-nav .container .search-bar {
+    grid-area: search;
+    width: 100%;
+}
+
+header .bottom-nav{
+    display: none;
+}
+
+}
+/* end top nav bar */
+/* //////////////////// bottom navbar  ///////////////////////// */
+
+header .bottom-nav{
+    background-color: #fff;
+    box-shadow: 1px 1px 10px gray;
+
+}
+header .bottom-nav .container{
+    display: flex;
+    padding: 0;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header .bottom-nav .category-list ul{
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+    align-items: center;
+}
+header .bottom-nav .category-list ul li{
+    padding: 10px 20px;
+}
+header .bottom-nav .category-list ul li a{
+    text-decoration: none;
+    color: var(--dark);
+    cursor: pointer;
+    
+
+}
+header .bottom-nav .category-list ul li a.active{
+    font-weight: bold;
+   color: #106881;
+}
+
+
+/* cateogry list button */
+
+
+.bottom-nav .cateogry-btn{
+    height: 100%;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    
+    justify-content: space-between;
+    gap: 5px;
+    color: #333;
+    cursor: pointer;
+}
+
+.bottom-nav .category{
+    position: relative;
+    z-index: 100;
+
+}
+.bottom-nav .category .categories{
+    position: absolute;
+    top: 28px;
+    right: -20px;
+    width: 200px;
+    border: 1px solid rgb(219, 216, 216);
+    height: 200px;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+.hide{
+    display: none;
+    transition: 0.3s ease;
+}
+.bottom-nav .category .categories li{
+    padding: 10px 20px;
+}
+.bottom-nav .category .categories li:not(:last-child){
+    border: 1px solid rgb(219, 216, 216);
+}
+
+
+ .bottom-nav .category .categories li a{
+    
+    text-decoration: none;
+    color: var(--dark);
+    transition: 0.3s ease;
+    &:hover{
+        color: #106881;
+        margin-left: 5px;
+    }
+}
